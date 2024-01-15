@@ -186,9 +186,9 @@ int main()
 
     IF(NOT _RET EQUAL 0)
         # save the command for debugging
-        SET(_COMMANDS "${_COMMAND}\n${_COMPILER} --cuda-gpu-arch=sm_35 ${ARGN} -c ${PROJECT_BINARY_DIR}/compile_tests/compiles_cuda.cu")
+        SET(_COMMANDS "${_COMMAND}\n${_COMPILER} --cuda-gpu-arch=sm_60 ${ARGN} -c ${PROJECT_BINARY_DIR}/compile_tests/compiles_cuda.cu")
         # try the compile test again with clang arguments
-        EXECUTE_PROCESS(COMMAND ${_COMPILER} --cuda-gpu-arch=sm_35 -c ${PROJECT_BINARY_DIR}/compile_tests/compiles_cuda.cu
+        EXECUTE_PROCESS(COMMAND ${_COMPILER} --cuda-gpu-arch=sm_60 -c ${PROJECT_BINARY_DIR}/compile_tests/compiles_cuda.cu
             RESULT_VARIABLE     _RET
             WORKING_DIRECTORY   ${PROJECT_BINARY_DIR}/compile_tests
             TIMEOUT             15
