@@ -363,6 +363,9 @@ void begin_parallel_for(ExecPolicy& policy, FunctorType& functor,
     Kokkos::Tools::beginParallelFor(
         name.get(), Kokkos::Profiling::Experimental::device_id(policy.space()),
         &kpID);
+    Kokkos::Tools::customBeginParallelFor(
+        name.get(), Kokkos::Profiling::Experimental::device_id(policy.space()),
+        &kpID);
   }
 #ifdef KOKKOS_ENABLE_TUNING
   size_t context_id = Kokkos::Tools::Experimental::get_new_context_id();
@@ -380,6 +383,7 @@ void end_parallel_for(ExecPolicy& policy, FunctorType& functor,
                       const std::string& label, uint64_t& kpID) {
   if (Kokkos::Tools::profileLibraryLoaded()) {
     Kokkos::Tools::endParallelFor(kpID);
+    Kokkos::Tools::customEndParallelFor(kpID);
   }
 #ifdef KOKKOS_ENABLE_TUNING
   size_t context_id = Kokkos::Tools::Experimental::get_current_context_id();

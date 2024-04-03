@@ -41,6 +41,12 @@ struct Kokkos_Profiling_SpaceHandle {
 };
 
 // NOLINTNEXTLINE(modernize-use-using): C compatibility
+typedef void (*Kokkos_Profiling_customBeginFunction)(const char*, const uint32_t,
+                                               uint64_t*);
+// NOLINTNEXTLINE(modernize-use-using): C compatibility
+typedef void (*Kokkos_Profiling_customEndFunction)(uint64_t);
+
+// NOLINTNEXTLINE(modernize-use-using): C compatibility
 typedef void (*Kokkos_Profiling_initFunction)(
     const int, const uint64_t, const uint32_t,
     struct Kokkos_Profiling_KokkosPDeviceInfo*);
@@ -259,7 +265,14 @@ struct Kokkos_Profiling_EventSet {
   Kokkos_Tools_contextBeginFunction begin_tuning_context;
   Kokkos_Tools_contextEndFunction end_tuning_context;
   Kokkos_Tools_optimizationGoalDeclarationFunction declare_optimization_goal;
-  char padding[232 *
+  Kokkos_Profiling_customBeginFunction custom_begin_parallel_for;
+  Kokkos_Profiling_customEndFunction custom_end_parallel_for;
+  Kokkos_Profiling_customBeginFunction custom_begin_parallel_reduce;
+  Kokkos_Profiling_customEndFunction custom_end_parallel_reduce;
+  Kokkos_Profiling_customBeginFunction custom_begin_parallel_scan;
+  Kokkos_Profiling_customEndFunction custom_end_parallel_scan;
+
+  char padding[(232-6) *
                sizeof(
                    Kokkos_Tools_functionPointer)];  // allows us to add another
                                                     // 256 events to the Tools

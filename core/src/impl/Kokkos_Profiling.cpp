@@ -273,7 +273,13 @@ bool eventSetsEqual(const EventSet& l, const EventSet& r) {
          l.end_tuning_context == r.end_tuning_context &&
          l.begin_tuning_context == r.begin_tuning_context &&
          l.request_output_values == r.request_output_values &&
-         l.declare_optimization_goal == r.declare_optimization_goal;
+         l.declare_optimization_goal == r.declare_optimization_goal &&
+         l.custom_begin_parallel_for == r.custom_begin_parallel_for &&
+         l.custom_end_parallel_for == r.custom_end_parallel_for &&
+         l.custom_begin_parallel_reduce == r.custom_begin_parallel_reduce &&
+         l.custom_end_parallel_reduce == r.custom_end_parallel_reduce &&
+         l.custom_begin_parallel_scan == r.custom_begin_parallel_scan &&
+         l.custom_end_parallel_scan == r.custom_end_parallel_scan;
 }
 enum class MayRequireGlobalFencing : bool { No, Yes };
 template <typename Callback, typename... Args>
@@ -320,11 +326,40 @@ void beginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
   }
 #endif
 }
+void customBeginParallelFor(const std::string& kernelPrefix,
+                            const uint32_t devID, uint64_t* kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_begin_parallel_for,
+      kernelPrefix.c_str(), devID, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    auto context_id = Experimental::get_new_context_id();
+    Experimental::begin_context(context_id);
+    Experimental::VariableValue contextValues[] = {
+        Experimental::make_variable_value(
+            Experimental::kernel_name_context_variable_id, kernelPrefix),
+        Experimental::make_variable_value(
+            Experimental::kernel_type_context_variable_id, "parallel_for")};
+    Experimental::set_input_values(context_id, 2, contextValues);
+  }
+#endif
+}
 
 void endParallelFor(const uint64_t kernelID) {
   Experimental::invoke_kokkosp_callback(
       Experimental::MayRequireGlobalFencing::Yes,
       Experimental::current_callbacks.end_parallel_for, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    Experimental::end_context(Experimental::get_current_context_id());
+  }
+#endif
+}
+void customEndParallelFor(const uint64_t kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_end_parallel_for, kernelID);
 #ifdef KOKKOS_ENABLE_TUNING
   if (Kokkos::tune_internals()) {
     Experimental::end_context(Experimental::get_current_context_id());
@@ -351,11 +386,41 @@ void beginParallelScan(const std::string& kernelPrefix, const uint32_t devID,
   }
 #endif
 }
+void customBeginParallelScan(const std::string& kernelPrefix,
+                             const uint32_t devID, uint64_t* kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_begin_parallel_scan,
+      kernelPrefix.c_str(), devID, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    auto context_id = Experimental::get_new_context_id();
+    Experimental::begin_context(context_id);
+    Experimental::VariableValue contextValues[] = {
+        Experimental::make_variable_value(
+            Experimental::kernel_name_context_variable_id, kernelPrefix),
+        Experimental::make_variable_value(
+            Experimental::kernel_type_context_variable_id, "parallel_for")};
+    Experimental::set_input_values(context_id, 2, contextValues);
+  }
+#endif
+}
 
 void endParallelScan(const uint64_t kernelID) {
   Experimental::invoke_kokkosp_callback(
       Experimental::MayRequireGlobalFencing::Yes,
       Experimental::current_callbacks.end_parallel_scan, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    Experimental::end_context(Experimental::get_current_context_id());
+  }
+#endif
+}
+
+void customEndParallelScan(const uint64_t kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_end_parallel_scan, kernelID);
 #ifdef KOKKOS_ENABLE_TUNING
   if (Kokkos::tune_internals()) {
     Experimental::end_context(Experimental::get_current_context_id());
@@ -383,10 +448,41 @@ void beginParallelReduce(const std::string& kernelPrefix, const uint32_t devID,
 #endif
 }
 
+void customBeginParallelReduce(const std::string& kernelPrefix,
+                               const uint32_t devID, uint64_t* kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_begin_parallel_reduce,
+      kernelPrefix.c_str(), devID, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    auto context_id = Experimental::get_new_context_id();
+    Experimental::begin_context(context_id);
+    Experimental::VariableValue contextValues[] = {
+        Experimental::make_variable_value(
+            Experimental::kernel_name_context_variable_id, kernelPrefix),
+        Experimental::make_variable_value(
+            Experimental::kernel_type_context_variable_id, "parallel_for")};
+    Experimental::set_input_values(context_id, 2, contextValues);
+  }
+#endif
+}
+
 void endParallelReduce(const uint64_t kernelID) {
   Experimental::invoke_kokkosp_callback(
       Experimental::MayRequireGlobalFencing::Yes,
       Experimental::current_callbacks.end_parallel_reduce, kernelID);
+#ifdef KOKKOS_ENABLE_TUNING
+  if (Kokkos::tune_internals()) {
+    Experimental::end_context(Experimental::get_current_context_id());
+  }
+#endif
+}
+
+void customEndParallelReduce(const uint64_t kernelID) {
+  Experimental::invoke_kokkosp_callback(
+      Experimental::MayRequireGlobalFencing::Yes,
+      Experimental::current_callbacks.custom_end_parallel_reduce, kernelID);
 #ifdef KOKKOS_ENABLE_TUNING
   if (Kokkos::tune_internals()) {
     Experimental::end_context(Experimental::get_current_context_id());
@@ -639,6 +735,23 @@ void initialize(const std::string& profileLibrary) {
                 << ", RTLD_NOW | RTLD_GLOBAL) failed with " << dlerror()
                 << '\n';
     } else {
+      lookup_function(
+          firstProfileLibrary, "kokkosp_custom_begin_parallel_scan",
+          Experimental::current_callbacks.custom_begin_parallel_scan);
+      lookup_function(
+          firstProfileLibrary, "kokkosp_custom_begin_parallel_for",
+          Experimental::current_callbacks.custom_begin_parallel_for);
+      lookup_function(
+          firstProfileLibrary, "kokkosp_custom_begin_parallel_reduce",
+          Experimental::current_callbacks.custom_begin_parallel_reduce);
+      lookup_function(firstProfileLibrary, "kokkosp_custom_end_parallel_scan",
+                      Experimental::current_callbacks.custom_end_parallel_scan);
+      lookup_function(firstProfileLibrary, "kokkosp_custom_end_parallel_for",
+                      Experimental::current_callbacks.custom_end_parallel_for);
+      lookup_function(
+          firstProfileLibrary, "kokkosp_custom_end_parallel_reduce",
+          Experimental::current_callbacks.custom_end_parallel_reduce);
+
       lookup_function(firstProfileLibrary, "kokkosp_begin_parallel_scan",
                       Experimental::current_callbacks.begin_parallel_scan);
       lookup_function(firstProfileLibrary, "kokkosp_begin_parallel_for",
@@ -974,6 +1087,27 @@ void set_callbacks(Kokkos::Tools::Experimental::EventSet new_events) {
 namespace Profiling {
 bool profileLibraryLoaded() { return Kokkos::Tools::profileLibraryLoaded(); }
 
+void customBeginParallelFor(const std::string& kernelPrefix,
+                            const uint32_t devID, uint64_t* kernelID) {
+  Kokkos::Tools::customBeginParallelFor(kernelPrefix, devID, kernelID);
+}
+void customBeginParallelReduce(const std::string& kernelPrefix,
+                               const uint32_t devID, uint64_t* kernelID) {
+  Kokkos::Tools::customBeginParallelReduce(kernelPrefix, devID, kernelID);
+}
+void customBeginParallelScan(const std::string& kernelPrefix,
+                             const uint32_t devID, uint64_t* kernelID) {
+  Kokkos::Tools::customBeginParallelScan(kernelPrefix, devID, kernelID);
+}
+void customEndParallelFor(const uint64_t kernelID) {
+  Kokkos::Tools::customEndParallelFor(kernelID);
+}
+void customEndParallelReduce(const uint64_t kernelID) {
+  Kokkos::Tools::customEndParallelReduce(kernelID);
+}
+void customEndParallelScan(const uint64_t kernelID) {
+  Kokkos::Tools::customEndParallelScan(kernelID);
+}
 void beginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
                       uint64_t* kernelID) {
   Kokkos::Tools::beginParallelFor(kernelPrefix, devID, kernelID);

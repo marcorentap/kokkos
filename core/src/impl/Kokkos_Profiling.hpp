@@ -68,6 +68,15 @@ Kokkos::Tools::Impl::InitializationStatus parse_environment_variables(
 
 bool profileLibraryLoaded();
 
+void customBeginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
+                      uint64_t* kernelID);
+void customEndParallelFor(const uint64_t kernelID);
+void customBeginParallelScan(const std::string& kernelPrefix, const uint32_t devID,
+                       uint64_t* kernelID);
+void customEndParallelScan(const uint64_t kernelID);
+void customBeginParallelReduce(const std::string& kernelPrefix, const uint32_t devID,
+                         uint64_t* kernelID);
+void customEndParallelReduce(const uint64_t kernelID);
 void beginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
                       uint64_t* kernelID);
 void endParallelFor(const uint64_t kernelID);
@@ -265,12 +274,21 @@ namespace Profiling {
 
 bool profileLibraryLoaded();
 
+void customBeginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
+                      uint64_t* kernelID);
+void customBeginParallelReduce(const std::string& kernelPrefix, const uint32_t devID,
+                         uint64_t* kernelID);
+void customBeginParallelScan(const std::string& kernelPrefix, const uint32_t devID,
+                       uint64_t* kernelID);
 void beginParallelFor(const std::string& kernelPrefix, const uint32_t devID,
                       uint64_t* kernelID);
 void beginParallelReduce(const std::string& kernelPrefix, const uint32_t devID,
                          uint64_t* kernelID);
 void beginParallelScan(const std::string& kernelPrefix, const uint32_t devID,
                        uint64_t* kernelID);
+void customEndParallelFor(const uint64_t kernelID);
+void customEndParallelReduce(const uint64_t kernelID);
+void customEndParallelScan(const uint64_t kernelID);
 void endParallelFor(const uint64_t kernelID);
 void endParallelReduce(const uint64_t kernelID);
 void endParallelScan(const uint64_t kernelID);
