@@ -181,7 +181,7 @@ inline void parallel_for(const std::string& str, const ExecPolicy& policy,
   // TODO: Call profiling hooks
   ExecPolicy inner_policy = policy;
   Impl::ParallelFor<FunctorType, ExecPolicy> closure(functor, inner_policy);
-  closure.execute();
+  closure.execute(thread_count);
 }
 
 template <class ExecPolicy, class FunctorType>
