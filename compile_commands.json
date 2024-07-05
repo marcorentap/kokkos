@@ -1,0 +1,140 @@
+[
+{
+  "directory": "/home/marcorentap/projects/kokkos/build",
+  "command": "/usr/lib/ccache/clang++  -I/home/marcorentap/projects/kokkos/build/generated -O2 -g -DNDEBUG -o CMakeFiles/impl_git_version.dir/generated/Kokkos_Version_Info.cpp.o -c /home/marcorentap/projects/kokkos/build/generated/Kokkos_Version_Info.cpp",
+  "file": "/home/marcorentap/projects/kokkos/build/generated/Kokkos_Version_Info.cpp",
+  "output": "CMakeFiles/impl_git_version.dir/generated/Kokkos_Version_Info.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Abort.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Abort.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Abort.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Abort.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_CPUDiscovery.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_CPUDiscovery.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Command_Line_Parsing.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Command_Line_Parsing.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Core.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Core.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Core.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Core.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Error.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Error.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Error.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Error.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_ExecPolicy.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_ExecPolicy.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_ExecPolicy.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_ExecPolicy.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_HostBarrier.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostBarrier.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostBarrier.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostBarrier.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostSpace.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostSpace.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace_deepcopy.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostSpace_deepcopy.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostSpace_deepcopy.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace_deepcopy.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_HostThreadTeam.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostThreadTeam.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_HostThreadTeam.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostThreadTeam.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_MemoryPool.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_MemoryPool.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_MemoryPool.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemoryPool.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_MemorySpace.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_MemorySpace.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_MemorySpace.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemorySpace.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Profiling.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Profiling.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Profiling.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Profiling.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_SharedAlloc.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_SharedAlloc.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_SharedAlloc.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_SharedAlloc.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Spinwait.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Spinwait.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Spinwait.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Spinwait.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_Stacktrace.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Stacktrace.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_Stacktrace.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Stacktrace.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/impl/Kokkos_hwloc.cpp.o -c /home/marcorentap/projects/kokkos/core/src/impl/Kokkos_hwloc.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/impl/Kokkos_hwloc.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_hwloc.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP.cpp.o -c /home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP_Instance.cpp.o -c /home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP_Instance.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP_Instance.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP_Instance.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/core/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP_Task.cpp.o -c /home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP_Task.cpp",
+  "file": "/home/marcorentap/projects/kokkos/core/src/OpenMP/Kokkos_OpenMP_Task.cpp",
+  "output": "core/src/CMakeFiles/kokkoscore.dir/OpenMP/Kokkos_OpenMP_Task.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/containers/src",
+  "command": "/usr/lib/ccache/clang++ -DKOKKOS_DEPENDENCE -I/home/marcorentap/projects/kokkos/build/containers/src -I/home/marcorentap/projects/kokkos/containers/src -I/home/marcorentap/projects/kokkos/build -I/home/marcorentap/projects/kokkos/build/core/src -I/home/marcorentap/projects/kokkos/core/src -I/home/marcorentap/projects/kokkos/core/src/../../tpls/desul/include -O2 -g -DNDEBUG -fopenmp=libomp -o CMakeFiles/kokkoscontainers.dir/impl/Kokkos_UnorderedMap_impl.cpp.o -c /home/marcorentap/projects/kokkos/containers/src/impl/Kokkos_UnorderedMap_impl.cpp",
+  "file": "/home/marcorentap/projects/kokkos/containers/src/impl/Kokkos_UnorderedMap_impl.cpp",
+  "output": "containers/src/CMakeFiles/kokkoscontainers.dir/impl/Kokkos_UnorderedMap_impl.cpp.o"
+},
+{
+  "directory": "/home/marcorentap/projects/kokkos/build/simd/src",
+  "command": "/usr/lib/ccache/clang++  -I/home/marcorentap/projects/kokkos/build/simd/src -I/home/marcorentap/projects/kokkos/simd/src -I/home/marcorentap/projects/kokkos/build -O2 -g -DNDEBUG -o CMakeFiles/kokkossimd.dir/Kokkos_SIMD_dummy.cpp.o -c /home/marcorentap/projects/kokkos/simd/src/Kokkos_SIMD_dummy.cpp",
+  "file": "/home/marcorentap/projects/kokkos/simd/src/Kokkos_SIMD_dummy.cpp",
+  "output": "simd/src/CMakeFiles/kokkossimd.dir/Kokkos_SIMD_dummy.cpp.o"
+}
+]
